@@ -1,10 +1,29 @@
-﻿namespace Person
+﻿using System;
+
+namespace Person
 {
-    internal class Program
+    public class Person
+    {
+        public string name;
+        public string surname;
+        public int age;
+
+        public Person(string name, string surname,int age)
+        {
+            this.name = name;
+            this.surname = surname;
+            this.age = age;
+        }
+    }
+
+    public class Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
+            var teacher = new Teacher("Arif","Orucov",30);
+            teacher.Explain();
+            var student = new Student("Isa","Imanov",19);
+            student.Learn();
         }
     }
 }
